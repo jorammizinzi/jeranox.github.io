@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JERANOX - Create Beyond Limits | Agence Marketing Premium</title>
+    <meta name="description" content="JERANOX transforme votre vision en empire. Marketing stratégique, design premium géométrie sacrée, formation crypto. RDC | Ouganda | Corée du Sud.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #D4AF37;
+            --black: #000000;
+            --champagne: #E8C87C;
+            --white: #FEFEFE;
+            --pale-gold: #F4E4C1;
+            --bronze: #B8860B;
+            --dark-gray: #1A1A1A;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--gold);
+            letter-spacing: 3px;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        nav a {
+            color: var(--pale-gold);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 2px;
+            background: var(--gold);
+            transition: all 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 8rem 2rem 4rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(232, 200, 124, 0.03) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-logo {
+            text-align: center;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .hero-logo img {
+            max-width: 500px;
+            width: 100%;
+            filter: drop-shadow(0 0 40px rgba(212, 175, 55, 0.3));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero .tagline {
+            font-size: 1.8rem;
+            color: var(--champagne);
+            letter-spacing: 6px;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--pale-gold);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1.2rem 3rem;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        .btn-primary:hover {
+            background: var(--champagne);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 6rem 2rem;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--champagne);
+            text-align: center;
+            margin-bottom: 4rem;
+            font-weight: 300;
+        }
+
+        /* About Section */
+        .about {
+            background: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            padding: 2rem;
+        }
+
+        .about-text h3 {
+            color: var(--champagne);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            color: var(--pale-gold);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--dark-gray);
+            padding: 2rem;
+            border-left: 4px solid var(--gold);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateX(10px);
+            border-left-width: 8px;
+        }
+
+        .feature-card h4 {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: var(--white);
+            font-size: 0.95rem;
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--black);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #1A1A1A 0%, #0f0f0f 100%);
+            padding: 3rem 2rem;
+            border-top: 4px solid var(--gold);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .service-card:hover::before {
+            left: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card .divider {
+            width: 50px;
+            height: 2px;
+            background: var(--champagne);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card ul {
+            list-style: none;
+            color: var(--pale-gold);
+        }
+
+        .service-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .service-card li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        /* Packages Section */
+        .packages {
+            background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .package-card {
+            background: var(--dark-gray);
+            padding: 2.5rem 2rem;
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .package-card.featured {
+            border-color: var(--gold);
+            transform: scale(1.05);
+        }
+
+        .package-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-10px);
+        }
+
+        .package-name {
+            color: var(--gold);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .package-price {
+            font-size: 3rem;
+            color: var(--champagne);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .package-price span {
+            font-size: 1.2rem;
+        }
+
+        .package-features {
+            list-style: none;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .package-features li {
+            padding: 0.8rem 0;
+            color: var(--pale-gold);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--black);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            background: var(--dark-gray);
+            padding: 3rem;
+            border-left: 4px solid var(--gold);
+        }
+
+        .contact-info h3 {
+            color: var(--gold);
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item h4 {
+            color: var(--champagne);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            color: var(--pale-gold);
+            font-size: 1.1rem;
+        }
+
+        .contact-item a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: var(--champagne);
+        }
+
+        .contact-form {
+            background: var(--dark-gray);
+            padding: 3rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--champagne);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            padding: 4rem 2rem 2rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h3 {
+            color: var(--gold);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            color: var(--pale-gold);
+            line-height: 1.8;
+        }
+
+        .footer-section h4 {
+            color: var(--champagne);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: var(--pale-gold);
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 0;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            color: var(--pale-gold);
+        }
+
+        .footer-bottom p {
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline-footer {
+            color: var(--gold);
+            font-style: italic;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 3rem;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .packages-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">JERANOX</a>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À Propos</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>JERANOX</h1>
+                <p class="tagline">CREATE BEYOND LIMITS</p>
+                <p>Transformez votre vision en empire. De l'obscurité à la lumière, nous révélons le potentiel caché de votre marque et créons des identités visuelles qui inspirent, captivent et convertissent.</p>
+                <p style="color: var(--champagne); margin-top: 1rem;">📧 jeranox2025@gmail.com | 📱 Instagram & TikTok: @jeranox</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">CONSULTATION GRATUITE</a>
+                    <a href="#services" class="btn btn-secondary">NOS SERVICES</a>
+                </div>
+            </div>
+            <div class="hero-logo">
+                <img src="jeranox-logo.png" alt="JERANOX Logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos" class="about">
+        <div class="container">
+            <h2 class="section-title">QUI SOMMES-NOUS ?</h2>
+            <p class="section-subtitle">Agence Marketing Virtuelle Premium</p>
+            
+            <div class="about-content fade-in">
+                <div class="about-text">
+                    <h3>Notre Vision</h3>
+                    <p>JERANOX est une agence marketing virtuelle premium opérant entre la RDC et l'Ouganda. Notre mission est simple mais puissante : transformer des idées floues en marques mémorables et profitables.</p>
+                    
+                    <p>Nous combinons stratégie marketing professionnelle, design basé sur la géométrie sacrée et expertise crypto pour créer des marques qui dominent leur marché.</p>
+                    
+                    <p>Notre nom même raconte notre histoire. <strong>Jera</strong> symbolise la vision et la sagesse. <strong>Nox</strong> représente la nuit, l'obscurité d'où émerge la lumière. Ensemble, JERANOX incarne la transformation totale de votre projet.</p>
+                </div>
+                
+                <div class="about-features">
+                    <div class="feature-card">
+                        <h4>🌍 Présence Internationale</h4>
+                        <p>Bureaux en RDC et Ouganda pour une perspective multiculturelle africaine unique.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>✨ Excellence Premium</h4>
+                        <p>Design de géométrie sacrée et stratégies marketing qui transforment vraiment les marques.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>💎 Expertise Crypto</h4>
+                        <p>Maîtrise du Web3, blockchain et finance digitale pour vous donner un avantage compétitif.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🚀 Résultats Concrets</h4>
+                        <p>+50% de visibilité moyenne, conversions doublées, crédibilité renforcée garantie.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">NOS SERVICES</h2>
+            <p class="section-subtitle">Trois Piliers Pour Votre Succès</p>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">📊</div>
+                    <h3>STRATÉGIE MARKETING</h3>
+                    <div class="divider"></div>
+                    <ul>
+                        <li>Audit marketing complet</li>
+                        <li>Repositionnement de marque</li>
+                        <li>Analyse concurrentielle</li>
+                        <li>Étude de marché ciblée</li>
+                        <li>Plan d'action 30 jours</li>
+                        <li>Développement de projets</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">🎨</div>
+                    <h3>DESIGN & BRANDING</h3>
+                    <div class="divider"></div>
+                    <ul>
+                        <li>Logos géométrie sacrée</li>
+                        <li>Identités visuelles complètes</li>
+                        <li>Flyers, affiches, brochures</li>
+                        <li>Pitch deck investisseurs</li>
+                        <li>Vidéos marketing</li>
+                        <li>Sites web & landing pages</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">₿</div>
+                    <h3>FORMATION CRYPTO</h3>
+                    <div class="divider"></div>
+                    <ul>
+                        <li>Initiation cryptomonnaies</li>
+                        <li>Sécurité portefeuille</li>
+                        <li>Analyse fondamentale</li>
+                        <li>Méthodes d'investissement</li>
+                        <li>Web3 pour débutants</li>
+                        <li>DeFi, NFT, Metaverse</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages">
+        <div class="container">
+            <h2 class="section-title">NOS PACKAGES</h2>
+            <p class="section-subtitle">Solutions Adaptées À Votre Budget</p>
+            
+            <div class="packages-grid">
+                <div class="package-card fade-in">
+                    <h3 class="package-name">E-BOOK CRYPTO</h3>
+                    <div class="package-price">50<span>$</span></div>
+                    <ul class="package-features">
+                        <li>Formation Crypto complète</li>
+                        <li>E-book PDF téléchargeable</li>
+                        <li>Guide investissement</li>
+                        <li>Sécurité portefeuille</li>
+                        <li>Analyse fondamentale</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary">COMMANDER</a>
+                </div>
+                
+                <div class="package-card fade-in">
+                    <h3 class="package-name">STARTER</h3>
+                    <div class="package-price">100<span>$</span></div>
+                    <ul class="package-features">
+                        <li>Logo professionnel</li>
+                        <li>Palette de couleurs</li>
+                        <li>Carte de visite</li>
+                        <li>Consultation initiale</li>
+                        <li>1 révision incluse</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary">COMMANDER</a>
+                </div>
+                
+                <div class="package-card fade-in">
+                    <h3 class="package-name">GROWTH</h3>
+                    <div class="package-price">300<span>$</span></div>
+                    <ul class="package-features">
+                        <li>Identité visuelle complète</li>
+                        <li>Flyers & brochures</li>
+                        <li>Kit réseaux sociaux</li>
+                        <li>Guidelines de marque</li>
+                        <li>3 révisions incluses</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary">COMMANDER</a>
+                </div>
+                
+                <div class="package-card fade-in">
+                    <h3 class="package-name">PRO</h3>
+                    <div class="package-price">600<span>$</span></div>
+                    <ul class="package-features">
+                        <li>Tout Growth +</li>
+                        <li>Site web professionnel</li>
+                        <li>Vidéo marketing</li>
+                        <li>Stratégie digitale</li>
+                        <li>Révisions illimitées</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">COMMANDER</a>
+                </div>
+                
+                <div class="package-card fade-in">
+                    <h3 class="package-name">EMPIRE</h3>
+                    <div class="package-price">800<span>$</span></div>
+                    <ul class="package-features">
+                        <li>Tout Pro +</li>
+                        <li>Stratégie complète</li>
+                        <li>Formation crypto</li>
+                        <li>Support prioritaire</li>
+                        <li>Accompagnement 3 mois</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary">COMMANDER</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">CONTACTEZ-NOUS</h2>
+            <p class="section-subtitle">Votre Transformation Commence Maintenant</p>
+            
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <h3>CONTACTEZ-NOUS</h3>
+                    
+                    <div class="contact-item">
+                        <h4>🇨🇩 RDC (République Démocratique du Congo)</h4>
+                        <p><a href="tel:+243972727673">+243 972 727 673</a></p>
+                        <p>Kinshasa, Afrique Centrale</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>🇺🇬 OUGANDA</h4>
+                        <p><a href="tel:+256780756921">+256 780 756 921</a></p>
+                        <p>Kampala, Afrique de l'Est</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>📧 EMAIL</h4>
+                        <p><a href="mailto:jeranox2025@gmail.com">jeranox2025@gmail.com</a></p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>📱 RÉSEAUX SOCIAUX</h4>
+                        <p><a href="https://instagram.com/jeranox" target="_blank">Instagram: @jeranox</a></p>
+                        <p><a href="https://tiktok.com/@jeranox" target="_blank">TikTok: @jeranox</a></p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>🌐 SITE WEB</h4>
+                        <p><a href="https://jorammizinzi.github.io/Jeranox/" target="_blank">jorammizinzi.github.io/Jeranox</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-form fade-in">
+                    <h3>DEMANDE DE DEVIS GRATUIT</h3>
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nom Complet *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Intéressé *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Choisissez un service</option>
+                                <option value="marketing">Stratégie Marketing</option>
+                                <option value="design">Design & Branding</option>
+                                <option value="crypto">Formation Crypto</option>
+                                <option value="package">Package Complet</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Votre Projet *</label>
+                            <textarea id="message" name="message" required placeholder="Décrivez-nous votre projet et vos objectifs..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">ENVOYER MA DEMANDE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>JERANOX</h3>
+                <p>Agence marketing virtuelle premium. De l'obscurité à la lumière, nous transformons vos idées en marques puissantes et mémorables.</p>
+                <p style="margin-top: 1.5rem; color: var(--champagne);">📧 jeranox2025@gmail.com</p>
+                <p style="color: var(--gold);">📱 Instagram & TikTok: @jeranox</p>
+                <p style="margin-top: 1rem; color: var(--gold);">🌍 RDC | Ouganda</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Stratégie Marketing</a></li>
+                    <li><a href="#services">Design & Branding</a></li>
+                    <li><a href="#services">Formation Crypto</a></li>
+                    <li><a href="#packages">Nos Packages</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Entreprise</h4>
+                <ul>
+                    <li><a href="#apropos">À Propos</a></li>
+                    <li><a href="#packages">Tarifs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Légal</h4>
+                <ul>
+                    <li><a href="#">Mentions Légales</a></li>
+                    <li><a href="#">Politique de Confidentialité</a></li>
+                    <li><a href="#">CGV</a></li>
+                    <li><a href="#">RGPD</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 JERANOX. Tous droits réservés.</p>
+            <p class="tagline-footer">From Darkness to Design</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navUl = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', () => {
+            navUl.style.display = navUl.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Form submission (basic example)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Merci pour votre demande ! Nous vous contacterons dans les 24 heures.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
